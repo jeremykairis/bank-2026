@@ -1,6 +1,16 @@
-public class SavingsAccount(string number, Person owner) : Account(number, owner)
+public class SavingsAccount : Account
 {
     public DateTime DateLastWithdraw { get; private set; }
+
+    public SavingsAccount(string number, Person owner)
+        : base(number, owner)
+    {
+    }
+
+    public SavingsAccount(string number, Person owner, double balance)
+        : base(number, owner, balance)
+    {
+    }
 
     public override void Withdraw(double amount)
     {
